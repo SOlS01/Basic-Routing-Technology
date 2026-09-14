@@ -74,4 +74,18 @@ Show startup-config (to see the startup)
 
 copy running-config startup-config 
 
- 
+
+
+# To configure a static route on routers >> 
+
+(Configuration mode) Ip route {network address} {subnet mask} {next hop IP address or exit interface (from that IP address)} 
+
+For example, >> clicked on R1 and destination which I want to connect to is 192.168.20.0/24 and the router after that PC has 172.16.1.2 Ip address to connect to R1. >> ip route 192.168.20.0 255.255.255.0 172.16.1.2 
+
+To check the ip route >>  
+
+(in show mode) show ip route  
+
+OR  
+
+show ip route | begin Gateway 
